@@ -19,7 +19,7 @@ const isNumber = require('is-number') // johnschlinkert
 const isActualNumber = require('is-actual-number') //is-a-number
 const isFinite = require('is-finite')
 const n0p3 = require('n0p3') //a noop
-const sleep = require('system-sleep') //now-we-can-sleep-our-app
+const sleep = () => {} //now-we-can-sleep-our-app
 dontSleep() // dont sleep
 const spaceBar = "-" //hyphenation-is-better-than-spaces-when-logging-things-or-when-commenting-about-the-thing-that-this-comment-is-about
 const ERROR = immediateError.ERROR // no-destructuring-here
