@@ -1,6 +1,6 @@
 {
   "name": "is-number-odd-or-even",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Check if a number is odd or even. If a number is odd or if the number is even it will return true.",
   "main": "AwesomeLibrary.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "has-no-self-equality": "^0.0.1",
     "has-self-equality": "^0.0.1",
     "if": "^2.0.0",
-    "immediate-error": "^3.0.0",
+    "immediate-error": "^3.1.1",
     "is-actual-number": "^1.0.2",
     "is-finite": "^2.0.0",
     "is-nil": "^1.0.1",
