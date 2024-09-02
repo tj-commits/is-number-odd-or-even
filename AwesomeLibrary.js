@@ -126,19 +126,6 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
       )
     )
   )
-
-  attempt(() => {
-    immediateError(undefined, { errorType: ERROR.FuckingError })
-  }).rescue((err) => {
-    if (loggingEnabled) {
-
-      console.log(clc.yellow(`[is-number-odd-or-even] There was an error: ${err}`))
-
-      console.log(clc.yellow(`[is-number-odd-or-even] Note: this error isn't bad it's just an error that doesn't mean anything broke`))
-
-    }
-
-  }).else(n0p3).ensure(n0p3).end()
   var checkerComparison = new TernaryCompare(
     isInfinite(num), !trueComparison.compare(), ((n) => {
       let result
