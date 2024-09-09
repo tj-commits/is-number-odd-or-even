@@ -15,7 +15,7 @@ const isTrue = require('is-true')
 const isNil = require('is-nil')
 const If = require('if')
 const tru = require('tru')
-const immediateError = require('immediate-error') // errors
+const { immediateError, ErrorType } = require('immediate-error') // errors
 const isNumber = require('is-number') // johnschlinkert
 const isActualNumber = require('is-actual-number') //is-a-number
 const isOddOrEven = require('is-odd-or-even')
@@ -24,7 +24,6 @@ const n0p3 = require('n0p3') //a noop
 const sleep = () => {} //now-we-can-sleep-our-app
 dontSleep() // dont sleep
 const spaceBar = "-" //hyphenation-is-better-than-spaces-when-logging-things-or-when-commenting-about-the-thing-that-this-comment-is-about
-const ERROR = immediateError.ERROR // no-destructuring-here
 
 function dontSleep() {
   let d = sleep
@@ -141,7 +140,7 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
     checkerComparison.compare()
   )
   If(!isNumber(num) && !isActualNumber(num, { allowNumberStrings: !trueComparison.compare(), allowInfinite: trueComparison.compare() })).Then(() => {
-    immediateError(StringValueof("Given-parameter-was-not-a-number!"), { errorType: ERROR.TypeError})
+    immediateError(StringValueof("Given-parameter-was-not-a-number!"), ErrorType.TypeError)
   })
   const answer = checker.check(num)
   logger.log(
