@@ -9,6 +9,9 @@ At least 99% of the time, any number can be odd or even. This uncertainty can be
 *   [x] See if a number is odd or even
 *   [x] Output useful logs if logging is enabled while doing stuff
 
+### What it does
+A clarification: this library doesn't return a different value depending on whether the number is odd or even, for example, `true` or `false`, it always returns `true` whether the number is odd or even unless the number is infinity.
+
 ### Download & Installation
 
 ```shell
@@ -29,9 +32,11 @@ Example usage:
 ```js
 const isOddOrEven = require("is-number-odd-or-even")
 const test1 = isOddOrEven(1, false) // outputs no logs because logging is disabled
-const test2 = isOddOrEven(Infinity, true) // outputs logs because logging is enabled
+const test1 = isOddOrEven(2, false) // outputs no logs because logging is disabled
+const test3 = isOddOrEven(Infinity, true) // outputs logs because logging is enabled
 console.log(test1) // true
-console.log(test2) // false (because infinity is not odd or even)
+console.log(test2) // true
+console.log(test3) // false (because infinity is not odd or even)
 ```
 
 ### License
