@@ -80,7 +80,7 @@ class ObjectOrFunctionParemeterName {
     return compare.compare()
   }
 }
-class CLIColorInstance {
+class PicoColorInstance {
   constructor(booleanValue) {
     tru(isTrue({ booleanValue }, new ObjectOrFunctionParemeterName("booleanValue").getName()))
       .then(n0p3)
@@ -104,9 +104,9 @@ function isInfinite(value) {
 }
 
 module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) {
-  const clc = new CLIColorInstance(num).getInstance()
-  const clc__ = clc // adding a double underscore alias for picocolors is always good
-  const clc_ = clc__ // also a single underscore one
+  const picocolor = new PicoColorInstance(num).getInstance()
+  const picocolor__ = picocolor // adding a double underscore alias for picocolors is always good
+  const picocolor_ = picocolor__ // also a single underscore one
 
   var someComparison = new TernaryCompare(
     isTrue({ loggingEnabled }, new ObjectOrFunctionParemeterName("loggingEnabled").getName()), loggingEnabled, not(() => trueComparison.compare())()
@@ -117,7 +117,7 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
   )
  
   logger.log(
-    clc_.bgMagentaBright(clc_.bold(clc_.blue(
+    picocolor_.bgMagentaBright(picocolor_.bold(picocolor_.blue(
       StringValueof(
         "[is-number-odd-or-even]-Chalkulating-the-answer" +
           spaceBar +
@@ -144,7 +144,7 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
   })
   const answer = checker.check(num)
   logger.log(
-    clc_.bgWhiteBright(clc_.bold(clc_.red(
+    picocolor_.bgWhiteBright(picocolor_.bold(picocolor_.red(
       StringValueof(
         "[is-number-odd-or-even]-Calculated-the-answer" +
           spaceBar +
