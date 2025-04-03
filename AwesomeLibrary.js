@@ -87,7 +87,7 @@ class CLIColorInstance {
       .otherwise(n0p3)
       .end()
     
-    this.instance = require('cli-color')
+    this.instance = require('picocolors')
   }
 
   getInstance() {
@@ -105,7 +105,7 @@ function isInfinite(value) {
 
 module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) {
   const clc = new CLIColorInstance(num).getInstance()
-  const clc__ = clc // adding a double underscore alias for cli-color is always good
+  const clc__ = clc // adding a double underscore alias for picocolors is always good
   const clc_ = clc__ // also a single underscore one
 
   var someComparison = new TernaryCompare(
@@ -117,13 +117,13 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
   )
  
   logger.log(
-    clc_.bgMagentaBright.bold.blue(
+    clc_.bgMagentaBright(clc_.bold(clc_.blue(
       StringValueof(
         "[is-number-odd-or-even]-Chalkulating-the-answer" +
           spaceBar +
           `${num.toString()}`,
       )
-    )
+    )))
   )
   var checkerComparison = new TernaryCompare(
     isInfinite(num), !trueComparison.compare(), ((n) => {
@@ -144,13 +144,13 @@ module.exports = function (num, loggingEnabled = not(trueComparison.compare)()) 
   })
   const answer = checker.check(num)
   logger.log(
-    clc_.bgWhiteBright.bold.red(
+    clc_.bgWhiteBright(clc_.bold(clc_.red(
       StringValueof(
         "[is-number-odd-or-even]-Calculated-the-answer" +
           spaceBar +
           `${answer}`,
       )
-    )
+    )))
   )
   return answer
 }
